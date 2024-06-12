@@ -8,7 +8,7 @@ app = FastAPI()
 print("Started")
 
 @app.get("/")
-async def getCaptcha():
+async def pingOk():
     return {"Message": "get ok!"}
     
 @app.post("/captcha2")
