@@ -7,6 +7,10 @@ from fastapi import FastAPI
 app = FastAPI()
 print("Started")
 
+@app.get("/")
+async def getCaptcha(imgstring):
+    return {"Message": "get ok!"}
+    
 @app.post("/captcha2")
 async def getCaptcha(imgstring):
     imgstring = imgstring.replace(" ", "+")
